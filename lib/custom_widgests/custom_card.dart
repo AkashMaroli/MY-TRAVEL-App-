@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travelapp/custom_widgests/custom_buttons.dart';
 import 'package:travelapp/custom_widgests/custom_text.dart';
-import 'package:travelapp/db/db_function/tripdb_function.dart';
-import 'package:travelapp/db/db_model/trip_model.dart';
+import 'package:travelapp/core/services/tripdb_function.dart';
+import 'package:travelapp/data/model/trip_model.dart';
 
 class CustomCard extends StatefulWidget {
   final VoidCallback fn;

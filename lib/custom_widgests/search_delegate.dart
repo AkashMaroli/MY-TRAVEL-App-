@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travelapp/screens/Journey/all_journeys_screen.dart';
+import 'package:travelapp/view/Journey/all_journeys_screen.dart';
 
 
 class CustomSearchDelegate extends SearchDelegate{

@@ -28,14 +28,17 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  change_app_package_name: ^1.5.0
   cupertino_icons: ^1.0.2
   eva_icons_flutter: ^3.1.0
   flutter:
     sdk: flutter
   hive_flutter: ^1.1.0
+  image_cropper: ^11.0.0
   image_picker: ^1.0.8
   intl: ^0.19.0
   persistent_bottom_nav_bar: ^5.0.2
+  provider: ^6.1.5+1
   shared_preferences: ^2.2.3
 
 dev_dependencies:
@@ -46,7 +49,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "Asset/Image/path.png"
+  image_path: "Asset/Image/app_icon.png"
   build_runner: ^2.4.9
   flutter_lints: ^2.0.0
 

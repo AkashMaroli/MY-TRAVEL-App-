@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:travelapp/db/db_model/atripdetail_modal.dart';
-import 'package:travelapp/db/db_model/blog_modal.dart';
-import 'package:travelapp/db/db_model/trip_model.dart';
-import 'package:travelapp/db/db_model/user_model.dart';
-import 'package:travelapp/screens/Intro/splash_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:travelapp/core/providers/app_providers.dart';
+import 'package:travelapp/data/model/atripdetail_modal.dart';
+import 'package:travelapp/data/model/blog_modal.dart';
+import 'package:travelapp/data/model/trip_model.dart';
+import 'package:travelapp/data/model/user_model.dart';
+import 'package:travelapp/view/Intro/splash_screen.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -16,7 +18,8 @@ void main() async {
   Hive.registerAdapter(NotesModalAdapter());
   Hive.registerAdapter(PhotosModalAdapter());
   Hive.registerAdapter(ExpenceModalAdapter());
-  runApp(const MyApp());
+  runApp(
+      MultiProvider(providers: AppProviders.providers, child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,9 +35,6 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: true,
         ),
-        home: 
-        const SplashScreen()
-        
-        );
+        home: const SplashScreen());
   }
 }
